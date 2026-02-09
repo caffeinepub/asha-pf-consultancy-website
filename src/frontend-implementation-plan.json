@@ -1,74 +1,35 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Landing page cleanup, credibility line, and ASHA PF CONSULTANCY logo + favicon",
+  "title": "Remove ASHA PF CONSULTANCY logo from hero and favicon",
   "requirements": [
     {
-      "id": "REQ-7",
-      "summary": "Remove the “Our Simple Process” section so it is not rendered anywhere and preserve anchor scrolling behavior.",
+      "id": "REQ-14",
+      "summary": "Remove the logo image from the Hero section and rebalance spacing so the hero still feels intentional.",
       "acceptanceCriteria": [
-        "The section with heading “Our Simple Process” is removed from the rendered page.",
-        "No process step cards (Case Review, Documentation, EPFO Follow-up, Amount Credited) appear anywhere on the site.",
-        "The page still scrolls correctly to #services and #contact anchors (no broken navigation/scroll behavior)."
+        "The hero section no longer renders an <img> for the logo (currently /assets/generated/asha-pf-logo-transparent.dim_1200x300.png).",
+        "The hero layout still looks intentional on mobile and desktop (no empty spacing where the logo used to be)."
       ],
       "file_operations": [
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Remove the entire JSX block labeled “Process Section” (heading “Our Simple Process” and the four step cards) so it is no longer rendered; ensure existing scrollToSection calls and the #services/#contact section ids remain unchanged."
+          "description": "Remove the Hero-section logo <img> that references /assets/generated/asha-pf-logo-transparent.dim_1200x300.png, and adjust the surrounding layout (e.g., spacing/alignment in the hero text stack) so there is no awkward gap where the logo was. Verify there are no other hero-area references to the generated logo assets."
         }
       ]
     },
     {
-      "id": "REQ-8",
-      "summary": "Add the exact credibility line “Helped more than 1000 individuals” in the hero area with responsive, legible styling.",
+      "id": "REQ-15",
+      "summary": "Stop using the generated logo favicon asset so the browser tab icon is no longer the ASHA PF CONSULTANCY logo.",
       "acceptanceCriteria": [
-        "The hero section displays the exact English text: “Helped more than 1000 individuals”.",
-        "The text is legible against the hero background on common breakpoints (mobile, tablet, desktop).",
-        "No other user-facing text is changed unintentionally."
+        "frontend/index.html no longer references /assets/generated/asha-pf-favicon-transparent.dim_64x64.png as the favicon.",
+        "After the change, the browser tab icon is no longer the ASHA PF CONSULTANCY logo (it may fall back to the browser default if no replacement is provided)."
       ],
       "file_operations": [
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "In the Hero Section content block (near the main heading/subtitle), add a new line that renders the exact text “Helped more than 1000 individuals” and apply Tailwind classes consistent with the existing hero typography/contrast so it remains visible and readable on mobile and desktop."
-        }
-      ]
-    },
-    {
-      "id": "REQ-9",
-      "summary": "Add generated ASHA PF CONSULTANCY logo assets, show the logo in the hero near the headline, and configure the favicon.",
-      "acceptanceCriteria": [
-        "New logo image assets exist under frontend/public/assets/generated and are referenced directly by the frontend (not served via backend).",
-        "The hero displays the logo alongside/above the “ASHA PF CONSULTANCY” headline without breaking layout on mobile or desktop.",
-        "A favicon is configured in frontend/index.html and loads in the browser tab.",
-        "All user-facing text remains in English."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/asha-pf-logo.dim_1200x300.png",
-          "operation": "create",
-          "description": "Add the generated professional wordmark logo asset (indigo/blue palette) as a static frontend file at frontend/public/assets/generated/asha-pf-logo.dim_1200x300.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/asha-pf-icon.dim_256x256.png",
-          "operation": "create",
-          "description": "Add the generated icon-only mark as a static frontend file at frontend/public/assets/generated/asha-pf-icon.dim_256x256.png."
-        },
-        {
-          "path": "frontend/public/assets/generated/asha-pf-favicon.dim_64x64.png",
-          "operation": "create",
-          "description": "Add the generated minimal favicon asset (transparent background) as a static frontend file at frontend/public/assets/generated/asha-pf-favicon.dim_64x64.png."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Integrate the logo into the Hero Section near the “ASHA PF CONSULTANCY” heading by referencing the static asset frontend/public/assets/generated/asha-pf-logo.dim_1200x300.png (and/or frontend/public/assets/generated/asha-pf-icon.dim_256x256.png where appropriate) with responsive sizing so the layout remains stable across breakpoints."
-        },
         {
           "path": "frontend/index.html",
           "operation": "modify",
-          "description": "Configure the site favicon by adding a favicon link in the document head that references the static asset frontend/public/assets/generated/asha-pf-favicon.dim_64x64.png (ensure it loads in the browser tab)."
+          "description": "Remove (or replace with a non-logo alternative) the <link rel='icon'> reference to /assets/generated/asha-pf-favicon-transparent.dim_64x64.png so the site no longer uses the generated logo favicon asset. Do not delete the generated favicon files; only stop referencing them."
         }
       ]
     }

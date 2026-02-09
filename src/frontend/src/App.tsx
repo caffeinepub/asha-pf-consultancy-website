@@ -1,15 +1,23 @@
+import { useState } from 'react';
 import { ContactForm } from './components/ContactForm';
 import { Button } from './components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './components/ui/card';
-import { CheckCircle2, Shield, Globe, FileText, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Shield, Globe, FileText, ArrowRight, Mail, MessageCircle } from 'lucide-react';
+import { AdminSubmissionsView } from './components/admin/AdminSubmissionsView';
 
 function App() {
+  const [showAdmin, setShowAdmin] = useState(false);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  if (showAdmin) {
+    return <AdminSubmissionsView onBack={() => setShowAdmin(false)} />;
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -21,13 +29,6 @@ function App() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                <div className="flex items-center justify-start">
-                  <img 
-                    src="/assets/generated/asha-pf-logo.dim_1200x300.png" 
-                    alt="ASHA PF CONSULTANCY" 
-                    className="h-16 md:h-20 w-auto"
-                  />
-                </div>
                 <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl">
                   ASHA PF CONSULTANCY
                 </h1>
@@ -193,6 +194,31 @@ function App() {
           </p>
           
           <div className="max-w-2xl mx-auto">
+            {/* Contact Details */}
+            <Card className="mb-8 border-2 border-[oklch(0.40_0.18_260)]/20">
+              <CardContent className="p-6">
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                  <a 
+                    href="https://wa.me/919372486690"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-[oklch(0.40_0.18_260)] hover:text-[oklch(0.35_0.20_270)] transition-colors font-medium"
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                    <span>WhatsApp: 9372486690</span>
+                  </a>
+                  <div className="hidden sm:block h-6 w-px bg-border"></div>
+                  <a 
+                    href="mailto:ashapfconsultancy@gmail.com"
+                    className="flex items-center gap-2 text-[oklch(0.40_0.18_260)] hover:text-[oklch(0.35_0.20_270)] transition-colors font-medium"
+                  >
+                    <Mail className="h-5 w-5" />
+                    <span>ashapfconsultancy@gmail.com</span>
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+
             <ContactForm />
           </div>
         </div>
@@ -207,7 +233,31 @@ function App() {
               Disclaimer: We are private EPF consultants and not affiliated with EPFO.
             </p>
           </div>
-          <div className="mt-6 pt-6 border-t border-white/10 text-center text-sm">
+          
+          {/* Contact Details in Footer */}
+          <div className="mt-6 pt-6 border-t border-white/10">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
+              <a 
+                href="https://wa.me/919372486690"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <MessageCircle className="h-4 w-4" />
+                <span>WhatsApp: 9372486690</span>
+              </a>
+              <span className="hidden sm:inline">|</span>
+              <a 
+                href="mailto:ashapfconsultancy@gmail.com"
+                className="flex items-center gap-2 hover:text-white transition-colors"
+              >
+                <Mail className="h-4 w-4" />
+                <span>ashapfconsultancy@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-6 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
             <p>
               Built with love using{' '}
               <a 
@@ -219,6 +269,12 @@ function App() {
                 caffeine.ai
               </a>
             </p>
+            <button
+              onClick={() => setShowAdmin(true)}
+              className="text-white/50 hover:text-white/70 transition-colors text-xs"
+            >
+              Admin
+            </button>
           </div>
         </div>
       </footer>

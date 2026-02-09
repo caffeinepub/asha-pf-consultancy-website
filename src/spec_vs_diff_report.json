@@ -1,30 +1,19 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-09T20:17:04.874Z",
-  "summary": "REQ-7 and REQ-8 appear implemented in App.tsx (Process section removed; credibility line added in hero). REQ-9 is partially implemented (logo referenced in hero and favicon configured), but the diff summary shows no new static image assets added under frontend/public/assets/generated, so the required generated logo files cannot be verified as present.",
-  "missing_requirements": [
-    {
-      "id": "REQ-9",
-      "requirement": "New logo image assets exist under frontend/public/assets/generated and are referenced directly by the frontend (not served via backend).",
-      "reason": "The hero and favicon reference files under /assets/generated, but the diff shows no added files, so the required generated image assets cannot be confirmed to exist in frontend/public/assets/generated.",
-      "evidence": [
-        "frontend/src/App.tsx",
-        "frontend/index.html",
-        "<file-diff>: Added files: none"
-      ]
-    }
-  ],
+  "generatedAt": "2026-02-09T20:32:04.827Z",
+  "summary": "REQ-14 and REQ-15 appear implemented: the Hero section no longer shows a logo <img>, and frontend/index.html no longer references the generated logo favicon asset. However, App.tsx includes additional admin-view toggling behavior that was not requested in this BuildRequest.",
+  "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Updated HTML document title to \"ASHA PF CONSULTANCY | EPF & EPS Experts\".",
-      "reason": "The BuildRequest only asked to remove the Process section and add the logo/stat line; changing the page title was not requested and could violate the AC about not changing other user-facing text unintentionally.",
+      "description": "Admin panel view toggle / inclusion of AdminSubmissionsView in the main App flow (showAdmin state and conditional rendering).",
+      "reason": "The BuildRequest is narrowly scoped to removing the hero logo image and removing the logo-based favicon; it explicitly states this is a frontend-only change and does not request adding or altering admin UI/navigation.",
       "evidence": [
-        "frontend/index.html"
+        "frontend/src/App.tsx (imports AdminSubmissionsView, defines showAdmin state, conditionally returns <AdminSubmissionsView ... />)"
       ]
     }
   ],
-  "confidence": 0.66,
+  "confidence": 0.74,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/index.html",

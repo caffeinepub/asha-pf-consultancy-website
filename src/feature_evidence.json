@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-entire-process-our-simple-process-section-from-the-landing-page-so-it-is-no-longer-rendered-anywhere-on-the-site",
-      "featureTitle": "Remove the entire “Process / Our Simple Process” section from the landing page so it is no longer rendered anywhere on the site.",
+      "featureId": "feature-remove-the-asha-pf-consultancy-logo-image-from-the-hero-section-so-no-logo-graphic-is-rendered-anywhere-in-the-hero-area",
+      "featureTitle": "Remove the ASHA PF CONSULTANCY logo image from the Hero section so no logo graphic is rendered anywhere in the hero area.",
       "files": [
         "frontend/src/App.tsx"
       ],
@@ -12,47 +12,30 @@
         "shadcn-ui@1.0.0",
         "build-template-react@1.0.0",
         "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
       ],
       "testIds": [
-        "REQ-7"
+        "REQ-14"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-add-a-credibility-statistic-line-with-the-exact-text-helped-more-than-1000-individuals-in-the-hero-area-styled-to-fit-the-existing-design-and-ensure-it-is-visible-on-mobile-and-desktop",
-      "featureTitle": "Add a credibility/statistic line with the exact text “Helped more than 1000 individuals” in the hero area, styled to fit the existing design, and ensure it is visible on mobile and desktop.",
+      "featureId": "feature-remove-the-asha-pf-consultancy-logo-based-favicon-so-the-site-no-longer-uses-the-generated-logo-favicon-asset",
+      "featureTitle": "Remove the ASHA PF CONSULTANCY logo-based favicon so the site no longer uses the generated logo favicon asset.",
       "files": [
-        "frontend/src/App.tsx"
+        "frontend/index.html"
       ],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
         "build-template-react@1.0.0",
         "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
       ],
       "testIds": [
-        "REQ-8"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-a-professional-asha-pf-consultancy-logo-to-the-site-using-generated-static-image-assets-and-integrate-it-into-the-hero-near-the-main-heading-and-as-the-site-favicon",
-      "featureTitle": "Add a professional “ASHA PF CONSULTANCY” logo to the site using generated static image assets, and integrate it into the hero (near the main heading) and as the site favicon.",
-      "files": [
-        "frontend/index.html",
-        "frontend/src/App.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-9"
+        "REQ-15"
       ],
       "confidence": "high"
     }
