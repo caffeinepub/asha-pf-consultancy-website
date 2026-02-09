@@ -1,0 +1,14 @@
+{
+  "frontend/src/App.tsx": "Main landing page component with hero (including logo and credibility line), features, services, CTA, contact, and footer sections with smooth scroll navigation and professional indigo/blue gradient design; \"Our Simple Process\" section removed.",
+  "frontend/src/components/ContactForm.tsx": "Contact form component with client-side validation, loading states, success/error messaging, and backend integration via React Query mutation hook.",
+  "frontend/src/hooks/useSubmitContactForm.ts": "React Query mutation hook that handles contact form submission to the backend actor with proper error handling and cache invalidation.",
+  "frontend/src/components/ui/button.tsx": "Reusable button component with multiple variants (default, outline, ghost, etc.) and sizes using class-variance-authority.",
+  "frontend/src/components/ui/card.tsx": "Card component with header, title, description, content, footer, and action subcomponents for consistent layout patterns.",
+  "frontend/src/components/ui/input.tsx": "Styled input component with focus states and accessibility features for form fields.",
+  "frontend/src/components/ui/textarea.tsx": "Styled textarea component with focus states for multi-line text input in forms.",
+  "frontend/src/components/ui/label.tsx": "Accessible label component using Radix UI primitives for form field labels.",
+  "frontend/src/lib/utils.ts": "Utility function for merging Tailwind CSS classes using clsx and tailwind-merge.",
+  "frontend/src/index.css": "Global styles with OKLCH-based indigo/blue professional color system for light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended color tokens, border radius, and animation settings for the design system.",
+  "frontend/index.html": "HTML entry point with updated page title and favicon configured for ASHA PF CONSULTANCY branding."
+}

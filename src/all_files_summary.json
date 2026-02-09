@@ -1,0 +1,17 @@
+{
+  "backend/main.mo": "Defines a backend actor that stores contact form submissions and exposes a submitContactForm method to add new entries with timestamps.",
+  "feature_evidence.json": "Lists feature evidence reports describing implemented features, affected files, components, test IDs, and confidence levels.",
+  "frontend-file-summaries.txt": "Provides prewritten summaries for major frontend files including App, components, hooks, utilities, and configuration.",
+  "frontend/index.css": "Defines global Tailwind base, component, and utility layers with extensive OKLCH color variables for light and dark themes.",
+  "frontend/index.html": "HTML entry point configuring branding, favicon, metadata, and loading the main frontend script.",
+  "frontend/src/App.tsx": "Main React page rendering the hero section with logo and credibility line, navigation buttons, and service details with smooth scrolling.",
+  "frontend/src/components/ContactForm.tsx": "Implements a validated contact form with success/error states and backend submission via React Query.",
+  "frontend/src/hooks/useActor.ts": "Creates and caches a backend actor instance based on identity, refreshing dependent queries when identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides authentication context and logic for managing Internet Identity login, logout, and identity state.",
+  "frontend/src/hooks/useSubmitContactForm.ts": "React Query mutation hook sending contact form data to the backend and invalidating related queries on success.",
+  "frontend/src/index.css": "Defines Tailwind base layers and custom OKLCH theme variables for light/dark modes plus global utility classes.",
+  "frontend/src/lib/utils.ts": "Exports a utility function that merges Tailwind and conditional class names.",
+  "frontend/src/main.tsx": "Bootstraps the React app with React Query and Internet Identity providers and loads global CSS.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, radius, animations, typography, and additional plugins.",
+  "project_state.json": "Stores project metadata, requirements, image needs, and feature definitions for the marketing site build."
+}

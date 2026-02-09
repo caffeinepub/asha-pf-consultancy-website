@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Build a marketing/landing website for ASHA PF CONSULTANCY (EPF/EPS consultancy) with hero, services, CTA, and contact form sections (remove the Process section).",
+  "architectural_notes": [
+    "Static responsive marketing site; Tailwind CSS via CDN as initial styling approach.",
+    "Single-page layout with anchor navigation to #services and #contact."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Professional wordmark logo with a simple icon, indigo/blue palette, text “ASHA PF CONSULTANCY” (asha-pf-logo.dim_1200x300.png)\n- Simplified icon-only mark that matches the logo style (asha-pf-icon.dim_256x256.png)\n- Minimal favicon version of the icon mark with transparent background (asha-pf-favicon.dim_64x64.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-responsive-single-page-marketing-website-for-asha-pf-consultancy-epf-eps-experts-with-in-page-anchor-navigation-and-the-following-sections-in-this-order-hero-headline-subheadline-two-ctas-linking-to-contact-and-services-and-a-short-bullet-list-why-choose-us-3-feature-cards-expert-handling-transparent-fees-pan-india-support-services-6-service-cards-process-4-step-cards-cta-band-headline-short-copy-button-linking-to-contact-contact-section-form-and-footer-copyright-2026-asha-pf-consultancy-all-rights-reserved-disclaimer-text-all-user-facing-text-must-be-in-english-and-match-the-provided-content",
+      "title": "Implement a responsive single-page marketing website for “ASHA PF CONSULTANCY | EPF & EPS Experts” with in-page anchor navigation and the following sections in this order: Hero (headline, subheadline, two CTAs linking to #contact and #services, and a short bullet list), Why Choose Us (3 feature cards: Expert Handling, Transparent Fees, PAN India Support), Services (6 service cards), Process (4 step cards), CTA band (headline, short copy, button linking to #contact), Contact section (form), and Footer (copyright “© 2026 ASHA PF CONSULTANCY. All rights reserved.” + disclaimer text). All user-facing text must be in English and match the provided content.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-and-apply-a-consistent-visual-theme-for-the-site-that-fits-a-professional-consultancy-brand-and-aligns-with-the-provided-tailwind-styling-direction-clean-high-contrast-modern-define-consistent-typography-scale-spacing-card-styling-and-a-primary-accent-color-family-indigo-blue-as-in-the-provided-html-and-use-it-across-all-sections",
+      "title": "Create and apply a consistent visual theme for the site that fits a professional consultancy brand and aligns with the provided Tailwind styling direction (clean, high-contrast, modern). Define consistent typography scale, spacing, card styling, and a primary accent color family (indigo/blue as in the provided HTML), and use it across all sections.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-the-contact-form-functional-in-the-react-app-with-client-side-validation-and-a-clear-submission-ux-fields-name-required-mobile-number-required-uan-optional-describe-your-pf-issue-required-on-submit-show-loading-state-then-show-a-success-confirmation-and-clear-the-form-do-not-navigate-away-from-the-page",
+      "title": "Make the Contact form functional in the React app with client-side validation and a clear submission UX. Fields: Name (required), Mobile Number (required), UAN (optional), Describe your PF issue (required). On submit, show loading state, then show a success confirmation and clear the form. Do not navigate away from the page.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-wire-the-frontend-contact-form-submission-to-the-backend-method-using-the-existing-actor-integration-pattern-and-react-query-for-mutation-management-loading-error-success-display-a-user-friendly-error-message-if-the-backend-rejects-the-submission",
+      "title": "Wire the frontend Contact form submission to the backend method using the existing actor integration pattern and React Query for mutation management (loading/error/success). Display a user-friendly error message if the backend rejects the submission.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-references-to-example-pf-form-names-numbers-e-g-form-31-form-13-from-all-user-facing-website-content-while-keeping-the-meaning-of-the-services-intact",
+      "title": "Remove references to example PF form names/numbers (e.g., “Form 31”, “Form 13”) from all user-facing website content, while keeping the meaning of the services intact.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-entire-process-our-simple-process-section-from-the-landing-page-so-it-is-no-longer-rendered-anywhere-on-the-site",
+      "title": "Remove the entire “Process / Our Simple Process” section from the landing page so it is no longer rendered anywhere on the site.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-credibility-statistic-line-with-the-exact-text-helped-more-than-1000-individuals-in-the-hero-area-styled-to-fit-the-existing-design-and-ensure-it-is-visible-on-mobile-and-desktop",
+      "title": "Add a credibility/statistic line with the exact text “Helped more than 1000 individuals” in the hero area, styled to fit the existing design, and ensure it is visible on mobile and desktop.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-professional-asha-pf-consultancy-logo-to-the-site-using-generated-static-image-assets-and-integrate-it-into-the-hero-near-the-main-heading-and-as-the-site-favicon",
+      "title": "Add a professional “ASHA PF CONSULTANCY” logo to the site using generated static image assets, and integrate it into the hero (near the main heading) and as the site favicon.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create ASHA PF CONSULTANCY landing website (responsive Tailwind page) with sections: Hero, Why Choose Us, Services, Process, CTA, Contact form, and Footer with disclaimer.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add backend support to receive and persist contact submissions. Store submissions in stable canister state with timestamp and the submitted fields (name, mobile, uan optional, message). Expose a backend method to create a submission that the frontend can call.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Remove references to example PF form names (e.g., Form 31, Form 13) from the website content.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Remove the \"Process / Our Simple Process\" section from the landing page.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add a professional logo for \"ASHA PF CONSULTANCY\" and integrate it into the site (e.g., header/hero and favicon as appropriate).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add a credibility/statistic line: \"Helped more than 1000 individuals\" (placement to fit the landing page layout, e.g., hero or trust bar).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "ASHA PF CONSULTANCY Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
